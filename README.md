@@ -6,8 +6,8 @@ Endpoints
 
 Room Types
 
-POST /api/v1/rooms-types: Create a new room type.
-GET /api/v1/rooms-types: Get all room types.
+POST /api/v1/room-types: Create a new room type.
+GET /api/v1/room-types: Get all room types.
 
 Rooms
 
