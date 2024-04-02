@@ -1,0 +1,26 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const dotenv_1 = __importDefault(require("dotenv"));
+const cookie_parser_1 = __importDefault(require("cookie-parser"));
+const userRoute_js_1 = __importDefault(require("./routes/userRoute.js"));
+dotenv_1.default.config();
+const port = process.env.PORT || 5000;
+const roomTypeRoute_js_1 = __importDefault(require("./routes/roomTypeRoute.js"));
+const roomRoute_js_1 = __importDefault(require("./routes/roomRoute.js"));
+const errorMiddleware_js_1 = require("./middleware/errorMiddleware.js");
+const db_js_1 = __importDefault(require("./config/db.js"));
+(0, db_js_1.default)();
+const app = (0, express_1.default)();
+app.use((0, cookie_parser_1.default)());
+app.use(express_1.default.json());
+app.use(express_1.default.urlencoded({ extended: false }));
+app.use('/api/users', userRoute_js_1.default);
+app.use('/api/v1/room-types', roomTypeRoute_js_1.default);
+app.use('/api/v1/rooms', roomRoute_js_1.default);
+app.use(errorMiddleware_js_1.notFound);
+app.use(errorMiddleware_js_1.errorHandler);
+app.listen(port, () => console.log(`Server running on ${port}`));

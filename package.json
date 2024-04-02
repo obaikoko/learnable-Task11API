@@ -1,11 +1,11 @@
 {
   "name": "task10-api",
   "version": "1.0.0",
-  "type": "module",
+  "type": "commonjs",
   "description": "Learnable task to creat api ",
   "main": "server.js",
   "scripts": {
-    "server": "nodemon server.js"
+    "server": "nodemon server.cjs"
   },
   "author": "Igeachi Jesse Obinna",
   "license": "ISC",

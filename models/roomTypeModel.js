@@ -25,7 +25,6 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RoomType = void 0;
 const mongoose_1 = __importStar(require("mongoose"));
-// Define the schema for the RoomType document
 const roomTypeSchema = new mongoose_1.Schema({
     name: {
         type: String,
@@ -34,6 +33,5 @@ const roomTypeSchema = new mongoose_1.Schema({
 }, {
     timestamps: true,
 });
-// Define the RoomType model
 const RoomType = mongoose_1.default.model('RoomType', roomTypeSchema);
 exports.RoomType = RoomType;
