@@ -1,6 +1,6 @@
 Hotel Management API
 
-This is a backend API for a hotel management system built using Node.js, Express.js, and MongoDB. It provides endpoints to manage room types and rooms, allowing users to create, retrieve, update, and delete data.
+This is a backend API for a hotel management system built using Node.js, Express.js, and MongoDB I also added TypeScript in the recent update. It provides endpoints to manage room types and rooms, allowing users to create, retrieve, update, and delete data.
 
 Endpoints
 
